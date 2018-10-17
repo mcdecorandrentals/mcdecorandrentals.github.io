@@ -42,6 +42,10 @@ html, body {
   padding-bottom: 1rem;
 }
 
+.video-fluid{
+  width: 100%;
+}
+
 .jumbotron {
   padding: 1rem;
   border-radius: 0;
@@ -156,6 +160,10 @@ footer a {
     padding: 8px  14px;
   }
 
+  .video-fluid{
+    width: 98%;
+  }
+
   .display-4 {
     font-size: 200%;
   }
@@ -181,6 +189,10 @@ footer a {
   .carousel-caption .btn{
     font-size: 90%;
     padding: 4px  8px;
+  }
+
+  .video-fluid{
+    width: 98%;
   }
 
   .display-4 {
