@@ -95,18 +95,37 @@ html, body {
   color: #0077B5;
 }
 
-.fa-youtube{
-  color: #bb0000;
+.fa-instagram{
+  color: #262626;
+}
+
+.fa-twitter{
+  color: #1DA1F2;
 }
 
 .fa-facebook:hover,
 .fa-linkedin:hover,
-.fa-youtube:hover{
+.fa-instagram:hover,
+.fa-twitter:hover{
   color: #d5d5d5;
 }
 
 .padding {
   padding-bottom: 2rem;
+}
+
+.contact-form {
+  background: #358CCE;
+  color: #FFF;
+  border-radius: 0px;
+  }
+  .contact-form-sm { padding-top: 24px;
+  padding-bottom: 24px; }
+  .contact-form small {
+  color: #FFF;
+  }
+  .h1 small {
+  font-size: 24px;
 }
 
 footer{
