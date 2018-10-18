@@ -118,14 +118,46 @@ html, body {
   background: #358CCE;
   color: #FFF;
   border-radius: 0px;
-  }
-  .contact-form-sm { padding-top: 24px;
-  padding-bottom: 24px; }
-  .contact-form small {
+}
+
+.contact-form-sm { 
+  padding-top: 24px;
+  padding-bottom: 24px; 
+}
+
+.contact-form small {
   color: #FFF;
-  }
-  .h1 small {
+}
+
+.h1 small {
   font-size: 24px;
+}
+
+.modal-dialog {
+  max-width: 650px;
+  margin: 30px auto;
+}
+
+.modal-body {
+  position:relative;
+  padding:0px;
+  min-height:400px;
+  background:#ccc;
+}
+
+.close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
+
+#image {
+  min-height:200px;
 }
 
 footer{
@@ -191,6 +223,10 @@ footer a {
     font-size: 2.5em;
     padding: 1.2rem;
   }
+
+  .modal-dialog {
+    width: 95%;
+  }
 }
 @media (max-width: 576px) {
   .carousel-caption {
@@ -225,6 +261,10 @@ footer a {
 
   .carousel-indicators {
     display: none;
+  }
+
+  .modal-dialog {
+    width: 90%;
   }
 }
 

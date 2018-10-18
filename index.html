@@ -55,10 +55,10 @@
 					<h1 class="display-2">MC</h1>
 					<h3>Decor Rental & Supplies</h3>
 					<a href="http://www.mcdecorandrentals.com/rentals/">
-						<button type="button" class="btn btn-outline-light btn-lg">Rentals</button>
+						<button type="button" class="btn btn-outline-light btn-lg">View Rentals</button>
 					</a>
 					<a href="http://www.mcdecorandrentals.com/event-planning/">
-						<button type="button" class="btn btn-primary btn-lg">Event Planning</button>
+						<button type="button" class="btn btn-primary btn-lg">See our Event Planning</button>
 					</a>
 				</div>
 			</div>
@@ -160,7 +160,48 @@
 					<br>
 				</div>
 				<div class="col-lg-6">
-					<img src="img/background1.png" class="img-fluid" data-target="#myModal">
+					<div class="container">
+						<div class="gallery">
+							<div class="row">
+								<div class="col-md-4">
+									<img src="img/background1.png" data-toggle="modal" data-bigimage="img/background1.png" data-target="#myModal"
+									 class="img-fluid rounded">
+								</div>
+								<div class="col-md-4">
+									<img src="img/carousel2.png" data-toggle="modal" data-bigimage="img/carousel2.png" data-target="#myModal"
+									 class="img-fluid rounded"></div>
+								<div class="col-md-4">
+									<img src="img/carousel3.png" data-toggle="modal" data-bigimage="img/carousel3.png" data-target="#myModal"
+									 class="img-fluid rounded">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<img src="img/carousel5.png" data-toggle="modal" data-bigimage="img/carousel5.png" data-target="#myModal"
+									 class="img-fluid rounded"></div>
+								<div class="col-md-4">
+									<img src="img/carousel6.png" data-toggle="modal" data-bigimage="img/carousel6.png" data-target="#myModal"
+									 class="img-fluid rounded"></div>
+								<div class="col-md-4">
+									<img src="img/carousel7.png" data-toggle="modal" data-bigimage="img/carousel7.png" data-target="#myModal"
+									 class="img-fluid rounded">
+								</div>
+							</div>
+						</div>
+						<!-- Modal -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-body">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+										<img src="//media.tenor.com/images/556e9ff845b7dd0c62dcdbbb00babb4b/tenor.gif" alt="" id="image" class="img-fluid">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -285,24 +326,26 @@
 		</div>
 	</footer>
 
+	<script src="js/alertFunction.js"></script>
+	<script src="js/centreModel.js"></script>
 	<script>
-		function myFunction() {
-			alert("Message Sent!");
-		}
+		$(document).ready(function () {
+			var $imageSrc;
+			$('.gallery img').click(function () {
+				$imageSrc = $(this).data('bigimage');
+			});
+			console.log($imageSrc);
 
-		function centerModal() {
-			$(this).css('display', 'block');
-			var $dialog = $(this).find(".modal-dialog");
-			var offset = ($(window).height() - $dialog.height()) / 2;
-			// Center modal vertically in window
-			$dialog.css("margin-top", offset);
-		}
+			$('#myModal').on('shown.bs.modal', function (e) {
+				$("#image").attr('src', $imageSrc);
+			})
 
-		$('.modal').on('show.bs.modal', centerModal);
-		$(window).on("resize", function () {
-			$('.modal:visible').each(centerModal);
+			$('#myModal').on('hide.bs.modal', function (e) {
+				$("#image").attr('src', '');
+			})
 		});
 	</script>
+	<!-- <script src="js/lightbox.js"></script> -->
 
 </body>
 
